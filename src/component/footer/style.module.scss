@@ -1,0 +1,68 @@
+@import "src/style";
+
+.advice {
+  color: 'white';
+  display: none;
+}
+
+.author {
+  color: #e8e8e8;
+  display: none;
+  margin-top: 8px;
+
+  @include media('>phone') {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #e8e8e8;
+    font-size: 13px;
+    margin: 0;
+    text-shadow: 1px 1px 0px black;
+    padding-top: 2px;
+  }
+}
+
+.container {
+  background: #15161b;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.wrapper {
+  @include media('>phone') {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    padding-top: 12px;
+    margin: 0 auto;
+    background: #15161b;
+    height: 100%;
+  }
+}
+
+.icon {
+  height: 18px;
+  fill: #e8e8e8;
+}
+
+.iconList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 14px 32px 10px 32px;
+  list-style: none;
+  max-width: 320px;
+
+  @include media('>phone') {
+    width: 320px;
+  }
+}
+
+.flashIcon {
+  height: 20px;
+  fill: #ffef9e;
+  position: relative;
+  top: 6px;
+  padding: 0 7px;
+}

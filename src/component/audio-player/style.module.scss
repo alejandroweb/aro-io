@@ -1,0 +1,132 @@
+@import "src/style";
+
+.artwork {
+  height: 36px;
+  width: 36px;
+}
+
+.artworkContainer {
+  background-color: #14151b;
+  height: 36px;
+  width: 36px;
+  margin-right: 12px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  background-color: #181a21;
+  height: 50px;
+  padding: 12px 13px 7px 17px;;
+  width: 100%;
+  
+  @include media('>phone') {
+    border-radius: 12px;
+    padding: 7px 13px 7px 12px;
+    width: 246px;
+  }
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #171920;
+  padding: 8px 12px 0 12px;
+  
+  @include media('>phone') {
+    margin-top: 4px;
+    background-color: transparent;
+    width: 246px;
+    padding: 0 5px;
+  }
+
+  svg {
+    cursor: pointer;
+    margin-right: 4px;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lcd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoSoundCloud {
+  width: 78px;
+  height: 12px;
+}
+
+.logoSoundCloudLink {
+  margin-left: 36px;
+  margin-top: 2px;
+}
+
+.time {
+  color: #4fbaf1;
+  font-size: 10px;
+  font-family: 'Dseg7', curier;
+  display: block;
+  text-align: right;
+  margin-top: 4px;
+}
+
+.timeOff {
+  color: #1c5d7e;
+  font-size: 10px;
+  font-family: 'Dseg7', curier;
+  display: block;
+  text-align: right;
+  margin-top: 4px;
+}
+
+.progressBar {
+  font-size: 10px;
+  font-family: 'Dseg7', curier;
+  display: block;
+  text-align: right;
+  margin-top: 4px;
+}
+
+.progressBarOn {
+  color: #4fbaf1;
+}
+
+.progressBarOff {
+  color: #1c5d7e;
+}
+
+.title {
+  margin: 0;
+  padding-top: 3px;
+  color: #4fbaf1;
+  font-size: 12px;
+  width: 172px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Dseg7', curier;
+}
+
+.titleOff {
+  margin: 0;
+  padding-top: 3px;
+  color: #1c5d7e;
+  font-size: 12px;
+  width: 172px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Dseg7', curier;
+}

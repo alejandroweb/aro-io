@@ -1,0 +1,35 @@
+@import "src/style";
+
+:export {
+  colorOn: #e93c3b;
+  colorOff: #733534;
+}
+
+.container {
+  text-align: center;
+}
+
+.iconWrapper {
+  align-items: center;
+  background-color: #191b22;
+  border-radius: 22px;
+  cursor: pointer;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  width: 36px;
+}
+
+.title {
+  display: none;
+
+  @include media('>phone') {
+    color: #e8e8e8;
+    display: inline-block;
+    font-size: 12px;
+    text-shadow: 1px 1px 0px black;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: 600;
+  }
+}

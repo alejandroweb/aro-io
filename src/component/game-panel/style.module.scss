@@ -1,0 +1,59 @@
+@import "src/style";
+
+.container {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  justify-content: center;
+  position: relative;
+
+  @include media('>phone') {
+    height: 100%;
+    flex-grow: 1;
+  }
+}
+
+.gameOver {
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gameOverTitle {
+  font-family: 'Press Start 2P', serif;
+  font-size: 22px;
+  color: #fef524;
+}
+
+.gameOverScore {
+  font-family: 'Press Start 2P', serif;
+  font-size: 15px;
+  color: #fef524;
+  margin-top: 20px;
+}
+
+.gameOverContinue {
+  font-family: 'Press Start 2P', serif;
+  font-size: 17px;
+  color: #fef524;
+  margin-top: 76px;
+  cursor: pointer;
+}
+
+.powerOff {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+}

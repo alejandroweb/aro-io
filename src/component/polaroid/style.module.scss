@@ -1,0 +1,22 @@
+@import "src/style";
+
+:export {
+  color1: #e63eb2;
+  color2: #e93c3b;
+  color3: #febb28;
+  color4: #fef524;
+  color5: #7dc663;
+  color6: #4fbaf1;
+}
+
+.polaroid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  @include media('>phone') {
+    flex-direction: row;
+    height: 100%;
+    width: auto;
+  }
+}

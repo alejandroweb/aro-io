@@ -1,0 +1,162 @@
+@import "src/style";
+
+.center {
+  background-color: #282c33;
+  border-bottom: solid 6px #191b22;
+  border-top: solid 6px #191b22;
+  display: flex;
+  margin-top: 32px;
+  overflow: hidden;
+  flex-direction: column;
+  
+  @include media('>phone') {
+    border: solid 6px #191b22;
+    border-top-left-radius: 12px;
+    margin-top: 28px;
+    border-top-right-radius: 12px;
+    flex-grow: 1;
+    flex-direction: row;
+  }
+}
+
+.centerRightPanel {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  padding: 0 12px;
+  
+  @include media('>phone') {
+    flex-direction: column;
+    padding: 24px 7px 24px 8px;
+  }
+}
+
+.centerRightPanelLives {
+  display: flex;
+  flex-direction: column;
+}
+
+.centerRightPanelFooter {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @include media('>phone') {
+    position: absolute;
+    bottom: 24px;
+  }
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  @include media('>phone') {
+    flex-direction: row;
+    padding-bottom: 34px;
+  }
+}
+
+.lives {
+  @include media('>phone') {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.speakers {
+  flex-grow: 1;
+  display: flex;
+
+  @include media('>phone') {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 24px;
+  }
+}
+
+.speakersLeft {
+  display: none;
+
+  @include media('>phone') {
+    display: flex;
+  }
+}
+
+.speaker {
+  flex: 1 0 auto;
+  border-radius: 50%;
+  position: relative;
+  top: -20px;
+
+  &:before {
+    content:'';
+    float:left;
+    padding-top:100%;
+  }
+
+  @include media('>phone') {
+    flex: 0;
+    top: 0;
+  }
+}
+
+.speakerSmall {
+  display: none;
+  background: rgba(0,0,0,0.08);
+
+  @include media('>phone') {
+    display: block;
+    margin: 0 46px;
+  }
+}
+
+.speakerBass {
+  background: rgba(0,0,0,0.08);
+  margin: 30px 20px 30px 40px;
+  
+  @include media('>phone') {
+    margin: 5px;
+  }
+}
+
+.speakerMedium {
+  background: rgba(0,0,0,0.08);
+  margin: 30px 40px 30px 20px;
+
+  @include media('>phone') {
+    margin: 12px 25px;
+  }
+}
+
+.title {
+  display: none;
+
+  @include media('>phone') {
+    color: #e8e8e8;
+    font-size: 12px;
+    text-shadow: 1px 1px 0px black;
+    display: inline-block;
+    font-weight: 600;
+  }
+}
+
+.titleTop {
+  margin-top: 16px;
+}
+
+.titleBottom {
+  margin-top: 12px;
+}
+
+.number {
+  color: #ffffff;
+  font-size: 16px;
+  text-shadow: 1px 1px 0px black;
+  font-weight: 600;
+  margin-top: 4px;
+}

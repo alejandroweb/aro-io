@@ -1,0 +1,86 @@
+
+@import "src/style";
+
+$gradient-color-1: #3d4148;
+$gradient-color-2: #282c33;
+$gradient-color-3: #14161b;
+
+.app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.speakerBackground {
+  background: 
+    linear-gradient(45deg, $gradient-color-1 12%, transparent 0, transparent 88%, $gradient-color-1 0),
+    linear-gradient(135deg, transparent 37%, $gradient-color-2 0, $gradient-color-2 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, $gradient-color-1 0, $gradient-color-1 63%, transparent 0) $gradient-color-3;
+  background-size: 16px 16px;
+}
+
+.frame {
+  composes: speakerBackground;
+  border: solid 12px #15171b;
+  border-radius: 24px;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  min-width: 320px;
+  
+  @include media('<=phone') {
+    min-height: 724px;
+  }
+
+  @include media('>phone') {
+    margin-top: 4%;
+    min-height: 560px;
+    align-self: center;
+  }
+}
+
+.trim {
+  align-items: center;
+  background-color: #ffef9e;
+  bottom: 0;
+  box-shadow: 0px -4px 0px 0px #fbe263;
+  display: flex;
+  flex-direction: row;
+  height: 36px;
+  justify-content: center;
+  padding-bottom: 2px;
+  position: absolute;
+  width: 100%;
+}
+
+.trimBar {
+  background-color: #906a16;
+  border-radius: 1px;
+  height: 2px;
+  width: 48px;
+}
+
+.trimText {
+  color: #906a16;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 12px;
+  text-shadow: 0px 0px 0px #fbe262;
+}
+
+.trapezoid {
+  border-top: 10px solid #555;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	height: 0;
+	width: 32px;
+}
+
+.trapezoidContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 32px;
+}

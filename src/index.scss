@@ -1,0 +1,42 @@
+@import-normalize;
+@import "src/style";
+
+@font-face {
+  font-family: 'Airstream';
+  src: local('Airstream'), url(./assets/fonts/airstream-regular.ttf) format('TrueType');
+}
+
+@font-face {
+  font-family: 'Dseg7';
+  src: local('Dseg7'), url(./assets/fonts/Open-24-Display-St.ttf) format('TrueType');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ceeeff;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  height: 100%;
+
+  @include media('>phone') {
+    display: flex;
+  }
+}
